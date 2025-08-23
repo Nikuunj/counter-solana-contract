@@ -14,4 +14,4 @@ export const schema: borsh.Schema = {
     }
 }
 
-export const COUNT_SIZE =  borsh.serialize(shema, new CounterAccount({count: 0})).length;
+export const COUNT_SIZE =  borsh.serialize(schema, new CounterAccount({count: 0})).length;
