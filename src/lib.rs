@@ -1,6 +1,3 @@
-
-use std::collections::btree_map::{VacantEntry, Values};
-
 use borsh::{BorshDeserialize, BorshSerialize};
 use solana_program::{
     account_info:: {next_account_info, AccountInfo}, entrypoint::{ProgramResult}, entrypoint, msg, pubkey:: Pubkey
@@ -41,6 +38,7 @@ pub fn counter_contract(
     }
 
     counter_data.serialize(&mut *acc.data.borrow_mut())?;
+    msg!("contract complete");
 
     Ok(())
 }
